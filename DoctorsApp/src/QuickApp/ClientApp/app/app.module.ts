@@ -12,6 +12,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import 'bootstrap';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -90,7 +91,8 @@ import { RoleEditorComponent } from "./components/controls/role-editor.component
         BsDropdownModule.forRoot(),
         CarouselModule.forRoot(),
         ModalModule.forRoot(),
-        ChartsModule
+        ChartsModule,
+        HttpClientModule
     ],
     declarations: [
         AppComponent,

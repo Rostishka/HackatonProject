@@ -188,9 +188,7 @@ namespace DAL
 
                 _context.Products.Add(prod_1);
                 _context.Products.Add(prod_2);
-
-                _context.Orders.Add(ordr_1);
-                _context.Orders.Add(ordr_2);
+                
 
                 await _context.SaveChangesAsync();
 

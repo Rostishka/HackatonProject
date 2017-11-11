@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DAL.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.KeyVault.Models;
 using Microsoft.Extensions.Logging;
@@ -11,15 +6,14 @@ using QuickApp.Services;
 
 namespace QuickApp.Controllers
 {
+    [Route("api/[controller]")]
     public class DoctorController : Controller
     {
-        //private IUnitOfWork _unitOfWork;
         readonly ILogger _logger;
         private IDoctorService _service;
 
-        public DoctorController(/*IUnitOfWork unitOfWork, */ILogger<DoctorController> logger, IDoctorService service)
+        public DoctorController(ILogger<DoctorController> logger, IDoctorService service)
         {
-           // _unitOfWork = unitOfWork;
             _logger = logger;
             _service = service;
         }

@@ -33,7 +33,6 @@ namespace DAL.Models
 
 
         public string JobTitle { get; set; }
-        public string PhoneNumber { get; set; }
         public string FullName { get; set; }
         public string Configuration { get; set; }
         public bool IsEnabled { get; set; }
@@ -55,10 +54,5 @@ namespace DAL.Models
         /// Navigation property for the claims this user possesses.
         /// </summary>
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
-
-        /// <summary>
-        /// Demo Navigation property for orders this user has processed
-        /// </summary>
-        public ICollection<Order> Orders { get; set; }
     }
 }
