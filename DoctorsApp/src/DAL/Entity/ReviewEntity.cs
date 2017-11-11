@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL.Entity
 {
-    public class ReviewEntity
+    public class ReviewEntity 
     {
         public int Id { get; set; }
         public string Advantage { get; set; }

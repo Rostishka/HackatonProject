@@ -30,7 +30,9 @@ using QuickApp.Helpers;
 using QuickApp.Policies;
 using AspNet.Security.OpenIdConnect.Primitives;
 using AspNet.Security.OAuth.Validation;
+using DAL.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using QuickApp.Services;
 using Swashbuckle.AspNetCore.Swagger;
 using AppPermissions = DAL.Core.ApplicationPermissions;
 
@@ -176,6 +178,9 @@ namespace QuickApp
             // Repositories
             services.AddScoped<IUnitOfWork, HttpUnitOfWork>();
             services.AddScoped<IAccountManager, AccountManager>();
+
+            //Services
+            services.AddTransient<IDoctorService, DoctorService>();
 
             // Auth Policies
             services.AddSingleton<IAuthorizationHandler, ViewUserByIdHandler>();

@@ -15,13 +15,13 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public interface IUnitOfWork
-    {
-        ICustomerRepository Customers { get; }
-        IProductRepository Products { get; }
-        IOrdersRepository Orders { get; }
+    //public interface IUnitOfWork
+    //{
+    //    ICustomerRepository Customers { get; }
+    //    IProductRepository Products { get; }
+    //    IOrdersRepository Orders { get; }
 
 
-        int SaveChanges();
-    }
+    //    int SaveChanges();
+    //}
 }

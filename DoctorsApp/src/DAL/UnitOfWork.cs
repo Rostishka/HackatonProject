@@ -11,71 +11,80 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Entity;
 using DAL.Repositories;
 using DAL.Repositories.Interfaces;
 
 namespace DAL
 {
-    public class UnitOfWork : IUnitOfWork
-    {
-        readonly ApplicationDbContext _context;
+    //public class UnitOfWork : IUnitOfWork
+    //{
+    //    readonly ApplicationDbContext _context;
 
-        ICustomerRepository _customers;
-        IProductRepository _products;
-        IOrdersRepository _orders;
-
-
-
-        public UnitOfWork(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+    //    ICustomerRepository _customers;
+    //    IProductRepository _products;
+    //    IOrdersRepository _orders;
 
 
 
-        public ICustomerRepository Customers
-        {
-            get
-            {
-                if (_customers == null)
-                    _customers = new CustomerRepository(_context);
-
-                return _customers;
-            }
-        }
-
-
-
-        public IProductRepository Products
-        {
-            get
-            {
-                if (_products == null)
-                    _products = new ProductRepository(_context);
-
-                return _products;
-            }
-        }
+    //    public UnitOfWork(ApplicationDbContext context)
+    //    {
+    //        _context = context;
+    //        DoctorEntity d = new DoctorEntity()
+    //        {
+                
+    //        };
+    //        ExperienceEntity e = new ExperienceEntity()
+    //        {
+                
+    //        };
+    //    }
 
 
 
-        public IOrdersRepository Orders
-        {
-            get
-            {
-                if (_orders == null)
-                    _orders = new OrdersRepository(_context);
+    //    public ICustomerRepository Customers
+    //    {
+    //        get
+    //        {
+    //            if (_customers == null)
+    //                _customers = new CustomerRepository(_context);
 
-                return _orders;
-            }
-        }
-
-
+    //            return _customers;
+    //        }
+    //    }
 
 
-        public int SaveChanges()
-        {
-            return _context.SaveChanges();
-        }
-    }
+
+    //    public IProductRepository Products
+    //    {
+    //        get
+    //        {
+    //            if (_products == null)
+    //                _products = new ProductRepository(_context);
+
+    //            return _products;
+    //        }
+    //    }
+
+
+
+    //    public IOrdersRepository Orders
+    //    {
+    //        get
+    //        {
+    //            if (_orders == null)
+    //                _orders = new OrdersRepository(_context);
+
+    //            return _orders;
+    //        }
+    //    }
+
+
+
+
+    //    public int SaveChanges()
+    //    {
+    //        return _context.SaveChanges();
+    //    }
+    //}
 }

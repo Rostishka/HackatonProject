@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using DAL;
 using QuickApp.ViewModels;
 using AutoMapper;
+using DAL.Interfaces;
 using DAL.Models;
 using Microsoft.Extensions.Logging;
 using QuickApp.Helpers;
@@ -39,8 +40,8 @@ namespace QuickApp.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var allCustomers = _unitOfWork.Customers.GetAllCustomersData();
-            return Ok(Mapper.Map<IEnumerable<CustomerViewModel>>(allCustomers));
+            //_unitOfWork.Customers.GetAllCustomersData();
+            return Ok()/*Mapper.Map<IEnumerable<CustomerViewModel>>(allCustomers)*/;
         }
 
 

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DAL.Models.Interfaces;
 
 namespace DAL.Entity
 {
-    public class AppointmentEntity
+    public class AppointmentEntity : IEntity
     {
         public int Id { get; set; }
         public DateTime Time { get; set; }

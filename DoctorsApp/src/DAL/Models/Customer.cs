@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace DAL.Models
 {
@@ -27,7 +28,7 @@ namespace DAL.Models
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
 
-
+        [JsonIgnore]
         public ICollection<Order> Orders { get; set; }
     }
 }

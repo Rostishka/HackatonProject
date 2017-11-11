@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using AspNet.Security.OpenIdConnect.Primitives;
+using AutoMapper;
+using DataAccessLayer.Repositories;
 
 namespace DAL
 {
