@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DAL.Entity
 {
-    public class Patient
+    public class EducationEntity
     {
     }
 }
